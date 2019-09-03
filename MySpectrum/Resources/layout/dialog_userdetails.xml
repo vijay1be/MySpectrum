@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth = "325dp"
+    android:minHeight = "400dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/user_icon" />
+        <TextView
+            android:id="@+id/viewFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Sign Up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textSize = "22sp"
+            android:textStyle = "bold" />
+        </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_margin="15dp">
+        <TextView
+               android:text="Username"
+               android:textSize="18dip" 
+               android:layout_marginBottom ="10dp"
+               android:textColor="@android:color/black"/>
+        <TextView
+              android:text=":"
+              android:textSize="18dip" 
+               android:layout_marginLeft="10dp"
+             android:layout_marginBottom ="10dp"
+              android:textColor="@android:color/black"/>
+        <TextView
+              android:id="@+id/viewUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:text=""
+              android:textSize="18dip"
+              android:layout_marginLeft="10dp"
+             android:layout_marginBottom ="10dp"
+              android:textColor="@android:color/black"/>
+        <TextView
+               android:text="Email Id"
+               android:textSize="18dip" 
+             android:layout_marginBottom ="10dp"
+               android:textColor="@android:color/black"/>
+        <TextView
+              android:text=":"
+              android:textSize="18dip" 
+               android:layout_marginLeft="10dp"
+             android:layout_marginBottom ="10dp"
+              android:textColor="@android:color/black"/>
+        <TextView
+             android:id="@+id/viewEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:text=""
+              android:textSize="18dip" 
+              android:layout_marginLeft="10dp"
+             android:layout_marginBottom ="10dp"
+              android:textColor="@android:color/black"/>
+        <TextView
+               android:text="Phone Number"
+               android:textSize="18dip" 
+               android:layout_marginBottom ="30dp"
+               android:textColor="@android:color/black"/>
+        <TextView
+              android:text=":"
+              android:textSize="18dip" 
+               android:layout_marginLeft="10dp"
+               android:layout_marginBottom ="30dp"
+              android:textColor="@android:color/black"/>
+        <TextView
+              android:id="@+id/viewPhoneNumber"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:textSize="18dip" 
+              android:layout_marginBottom ="30dp"
+              android:layout_marginLeft="10dp"
+              android:textColor="@android:color/black"/>
+    </GridLayout>
+    <Button
+            android:id = "@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Edit"
+            android:textColor="@android:color/white"
+            android:textStyle = "bold"
+             />
+<Button
+            android:id = "@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_gravity="end"
+            android:layout_margin="15dp"
+            android:background="@android:color/holo_red_light"
+            android:text="Delete"
+            android:textColor="@android:color/white"
+            android:textStyle = "bold"
+             />
+</LinearLayout>
