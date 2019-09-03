@@ -33,7 +33,6 @@ namespace MySpectrum
                 base.OnCreate(savedInstanceState);
                 SetContentView(Resource.Layout.activity_adduser); 
 
-
                 var _username = Intent.GetStringExtra("username");
                 btnAdd = FindViewById<Button>(Resource.Id.add);
                 txtUserName = FindViewById<EditText>(Resource.Id.adduserUserName);
@@ -78,8 +77,6 @@ namespace MySpectrum
                         editData.phonenumber = txtPhoneNumber.Text;
                         db.Update(editData);
                         Toast.MakeText(this, "User edited successfully", ToastLength.Short).Show();
-                        //StartActivity(typeof(UserListActivity));
-                        //Finish();
 
                         Intent returnIntent = new Intent();
                         returnIntent.PutExtra("result", "Success");
@@ -98,8 +95,6 @@ namespace MySpectrum
                             addData.phonenumber = txtPhoneNumber.Text;
                             db.Insert(addData);
                             Toast.MakeText(this, "User added successfully", ToastLength.Short).Show();
-                            //StartActivity(typeof(UserListActivity));
-                            //Finish();
 
                             Intent returnIntent = new Intent();
                             returnIntent.PutExtra("result", "Success");
@@ -128,8 +123,8 @@ namespace MySpectrum
                 string dpPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "user.db3");
                 var db = new SQLiteConnection(dpPath);
                 var data = db.Table<UserDetails>();
-                var data1 = data.Where(x => x.username == txtUserName.Text).FirstOrDefault();
-                if (data1 != null && btnAdd.Text == "Add")
+                var _userdata = data.Where(x => x.username == txtUserName.Text).FirstOrDefault();
+                if (_userdata != null && btnAdd.Text == "Add")
                     txtErrorMessage.Text = "* UserName already exists !";
                 if (string.IsNullOrWhiteSpace(txtFullName.Text))
                     txtErrorMessage.Text = "\n* Please enter a valid Name";

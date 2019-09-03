@@ -32,7 +32,7 @@ namespace MySpectrum
                 menu = FindViewById<Toolbar>(Resource.Id.toolbar);
                 userList = (ListView)FindViewById<ListView>(Resource.Id.userlistview);
                 SetActionBar(menu);
-                updateListivew();       
+                UpdateListivew();       
                 userList.ItemClick += (s, e) =>
                 {
 
@@ -41,7 +41,7 @@ namespace MySpectrum
                     dialog.Show(transaction, "user details frgament");
                     dialog.eventHandler += (object sender, System.EventArgs ev) =>
                     {
-                        updateListivew();
+                        UpdateListivew();
                     };
                 };
             }
@@ -50,7 +50,7 @@ namespace MySpectrum
 
             }
         }
-        void updateListivew()
+        void UpdateListivew()
         {
             try
             {
@@ -94,7 +94,7 @@ namespace MySpectrum
                 string result = data.GetStringExtra("result");
                 if (result == "Success")
                 {
-                    updateListivew();
+                    UpdateListivew();
                 }
             }
         }

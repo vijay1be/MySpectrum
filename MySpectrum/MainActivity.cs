@@ -77,7 +77,7 @@ namespace MySpectrum
                 });
                 alert.Show();
 
-                /* copy this event where ever necessary to track the user's live events */
+                /* copy this event where ever necessary to track the user's actions/events */
                // Analytics.TrackEvent("Forgotpassword Clicked", new Dictionary<string, string> { { "Test", "value" } });
             }
         }
@@ -123,7 +123,7 @@ namespace MySpectrum
                 db.CreateTable<UserDetails>();
                 //UserDetails dummydata = new UserDetails();
                 //dummydata.username = "username";
-                //dummydata.password = "1234";
+                //dummydata.password = "abc1234";
                 //dummydata.fullname = "Vijay Panneerselvam";
                 //dummydata.email = "vijay1.be@yahoo.com";
                 //dummydata.phonenumber = "773-225-8681";

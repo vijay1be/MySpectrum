@@ -78,8 +78,8 @@ namespace MySpectrum
                 string dpPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "user.db3");
                 var db = new SQLiteConnection(dpPath);
                 var data = db.Table<UserDetails>();
-                var data1 = data.Where(x => x.username == txtUserName.Text).FirstOrDefault();
-                if (data1 != null)
+                var _userdata = data.Where(x => x.username == txtUserName.Text).FirstOrDefault();
+                if (_userdata != null)
                     txtErrorMessage.Text = "* UserName already exists !";
                 if (string.IsNullOrWhiteSpace(txtFullName.Text))
                     txtErrorMessage.Text = "\n* Please enter a valid Name";
